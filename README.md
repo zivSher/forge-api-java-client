@@ -34,7 +34,6 @@ scopes.add("data:read");
 scopes.add("data:write");
 
 // Initialize the 2-legged OAuth 2.0 client, and optionally set specific scopes.
-// If you omit scopes, the generated token will have all scope permissions.
 // Set autoRefresh to `true` to automatically refresh the access token when it expires.
 OAuth2TwoLegged oauth2TwoLegged = new OAuth2TwoLegged(CLIENT_ID, CLIENT_SECRET, scopes, true);
 Credentials twoLeggedCredentials = oauth2TwoLegged.authenticate();
@@ -54,7 +53,6 @@ scopes.add("data:read");
 scopes.add("data:write");
 
 // Initialize the 3-legged OAuth 2.0 client, and optionally set specific scopes.
-// If you omit scopes, the generated token will have all scope permissions.
 // Set autoRefresh to `true` to automatically refresh the access token when it expires.
 // Note that the REDIRECT_URL must match the callback URL you provided when you created the app.
 OAuth2ThreeLegged oauth2ThreeLegged = new OAuth2ThreeLegged(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL, scopes, true);
